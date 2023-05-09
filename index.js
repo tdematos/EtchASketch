@@ -13,7 +13,19 @@ const createGrid = (amtOfGrids) => {
     }
 
     container.appendChild(row);
+
   }
 };
 
 createGrid(sizeOfGrid);
+
+const boxes = document.querySelectorAll('div');
+
+boxes.forEach(div => {
+  div.addEventListener("mouseover", () => {
+    console.log(boxes)
+    div.style.background = 'black';  
+  })
+})
+
+// createGrid(sizeOfGrid);
