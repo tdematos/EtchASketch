@@ -1,5 +1,6 @@
-const sizeOfGrid = 16;
+let sizeOfGrid = 16;
 const container = document.querySelector(".container");
+const resizeButton = document.querySelector("button");
 
 const createGrid = (amtOfGrids) => {
   for (let i = 0; i < amtOfGrids; i++) {
@@ -13,19 +14,26 @@ const createGrid = (amtOfGrids) => {
     }
 
     container.appendChild(row);
-
   }
 };
 
+resizeButton.addEventListener("click", () => {
+  function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
+
+  removeAllChildNodes(container);
+});
+
 createGrid(sizeOfGrid);
 
-const boxes = document.querySelectorAll('div');
+const boxes = document.querySelectorAll("div");
 
-boxes.forEach(div => {
+boxes.forEach((div) => {
   div.addEventListener("mouseover", () => {
-    console.log(boxes)
-    div.style.background = 'black';  
-  })
-})
-
-// createGrid(sizeOfGrid);
+    div.style.background = "gray";
+    div.style.transition = "all .45s";
+  });
+});

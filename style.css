@@ -1,14 +1,38 @@
+* {
+  background-color: yellow;
+}
+
 .grid-row {
   display: flex;
 }
 
 .grid-box {
-  width: 50px;
-  height: 50px;
-  border: 1px solid blue;
-  background-color: yellow;
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  background-color: lightgray;
 }
 
-/* .grid-box:hover {
-  background-color: blue;
-} */
+.container {
+  border-style: solid;
+  border-color: rgb(234, 16, 16);
+  border-width: 70px;
+  border-radius: 20px;
+  margin: 20px;
+  width: fit-content;
+}
+
+.Resize {
+  background-color: rgb(234, 16, 16);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Dancing Script", sans-serif;
+  font-size: 40pt;
+  font-weight: 800;
+}
