@@ -7,10 +7,16 @@
 }
 
 .grid-box {
-  width: 25px;
-  height: 25px;
+  width: 1em;
+  height: 1em;
   border: 1px solid white;
   background-color: lightgray;
+}
+
+.position {
+  display: flex;
+  justify-content: center;
+  background-color: yellow;
 }
 
 .container {
@@ -20,6 +26,7 @@
   border-radius: 20px;
   margin: 20px;
   width: fit-content;
+  align-content: center;
 }
 
 .Resize {
@@ -35,4 +42,10 @@ h1 {
   font-family: "Dancing Script", sans-serif;
   font-size: 40pt;
   font-weight: 800;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-family: "Dancing Script", sans-serif;
 }

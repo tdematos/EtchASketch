@@ -1,4 +1,4 @@
-let sizeOfGrid = 16;
+let sizeOfGrid = prompt();
 const container = document.querySelector(".container");
 const resizeButton = document.querySelector("button");
 
@@ -25,6 +25,29 @@ resizeButton.addEventListener("click", () => {
   }
 
   removeAllChildNodes(container);
+  let sizeOfGrid = prompt();
+
+  const createGrid = (amtOfGrids) => {
+    for (let i = 0; i < amtOfGrids; i++) {
+      const row = document.createElement("div");
+      row.classList.add("grid-row");
+
+      for (let j = 0; j < amtOfGrids; j++) {
+        const gridBox = document.createElement("div");
+        gridBox.classList.add("grid-box");
+        row.appendChild(gridBox);
+
+        gridBox.addEventListener("mouseover", () => {
+          gridBox.style.background = "gray";
+          gridBox.style.transition = "all .45s";
+        });
+      }
+
+      container.appendChild(row);
+    }
+  };
+
+  createGrid(sizeOfGrid);
 });
 
 createGrid(sizeOfGrid);
